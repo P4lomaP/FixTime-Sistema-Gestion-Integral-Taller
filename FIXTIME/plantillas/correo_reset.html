@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Restablecer contraseña — Fixtime</title>
+  <link rel="icon" type="image/png" href="publico/widoo.png">
+  <meta name="color-scheme" content="light dark">
+  <meta name="supported-color-schemes" content="light dark">
+  <style>
+    /* Estilos inlined friendly para email */
+    body{margin:0;padding:0;background:#0b1020;color:#e9f1ff}
+    .outer{width:100%;background:#0b1020;padding:24px 0}
+    .wrap{max-width:600px;margin:0 auto;background:#0f1b34;border-radius:14px;overflow:hidden;border:1px solid #1f2b4d}
+    .header{padding:26px 26px 8px 26px;text-align:center;background:linear-gradient(180deg,#111b3a,#0f1b34)}
+    .logo{width:120px;height:auto;display:block;margin:0 auto 8px auto}
+    .brand{font-family:Inter,Arial,sans-serif;font-weight:800;margin:0;font-size:22px;color:#e9f1ff}
+    .content{padding:22px 26px 10px 26px;background:#0f1b34;font-family:Inter,Arial,sans-serif;line-height:1.5;color:#e9f1ff}
+    .hi{font-size:16px;margin:0 0 10px 0}
+    .txt{font-size:14px;color:#c9d6ff;margin:0 0 18px 0}
+    .btnwrap{padding:8px 0 18px 0;text-align:center}
+    .btn{
+      display:inline-block;background:#5aa2ff;color:#06122c !important;text-decoration:none;
+      padding:12px 18px;border-radius:10px;font-weight:700;font-size:14px
+    }
+    .muted{font-size:12px;color:#93a3c3}
+    .hr{height:1px;background:#1f2b4d;margin:18px 0}
+    .link{word-break:break-all;color:#8ab5ff;text-decoration:none}
+    .foot{padding:0 26px 22px 26px;background:#0f1b34;font-family:Inter,Arial,sans-serif}
+    @media (prefers-color-scheme: light){
+      body,.outer{background:#f4f7ff;color:#0b172e}
+      .wrap{background:#ffffff;border-color:#dfe7ff}
+      .header{background:linear-gradient(180deg,#f4f7ff,#ffffff)}
+      .content,.foot{background:#ffffff;color:#0b172e}
+      .txt{color:#314774}
+      .muted{color:#5d6b8c}
+      .hr{background:#e7edff}
+    }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="wrap">
+      <div class="header">
+        <!-- Logo embebido por CID -->
+        <img class="logo" src="cid:{{CID_LOGO}}" alt="Fixtime">
+        <h1 class="brand">Fixtime</h1>
+      </div>
+      <div class="content">
+        <p class="hi">Hola {{NOMBRE}},</p>
+        <p class="txt">Recibimos tu solicitud para <strong>restablecer la contraseña</strong>. Hacé clic en el botón para continuar.</p>
+        <div class="btnwrap">
+          <a class="btn" href="{{URL}}" target="_blank" rel="noopener">Restablecer contraseña</a>
+        </div>
+        <p class="txt">Por seguridad, este enlace vence en <strong>{{VENCIMIENTO_HORAS}} minutos</strong>. Si no fuiste vos, podés ignorar este mensaje.</p>
+        <div class="hr"></div>
+        <p class="muted">Si el botón no funciona, copiá y pegá este enlace en tu navegador:</p>
+        <p class="muted"><a class="link" href="{{URL}}" target="_blank" rel="noopener">{{URL}}</a></p>
+      </div>
+      <div class="foot">
+        <p class="muted">© {{ANIO}} Fixtime — Todos los derechos reservados.</p>
+        <p style="text-align:center;margin:0 0 24px">
+  <a href="{{URL}}" target="_blank"
+     style="display:inline-block;background:#3b82f6;color:#fff;text-decoration:none;
+            padding:12px 18px;border-radius:10px;font-weight:700">
+    Restablecer contraseña
+  </a>
+</p>
+<p style="word-break:break-all;font-size:12px;color:#7f8aa3">{{URL}}</p>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
