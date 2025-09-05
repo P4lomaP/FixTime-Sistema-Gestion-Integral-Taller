@@ -1,1 +1,0 @@
-SELECT * FROM tallermecanico2.personas;
